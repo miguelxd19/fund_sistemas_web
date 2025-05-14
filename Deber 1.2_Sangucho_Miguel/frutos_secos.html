@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutos Secos</title>
+</head>
+<body>
+    <header>
+        <h1>LA FRUTA - FRUTOS SECOS</h1>
+        <a href="index.html">
+            <img src="logo_fruteria-lafruta.png" alt="logo" width="100" height="100">
+        </a>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Beneficios del consumo de frutos secos</h2>
+                <p>Los frutos secos, como las nueces, almendras, avellanas, pistachos y anacardos, 
+                son alimentos altamente nutritivos que ofrecen múltiples beneficios para la salud.
+                Uno de los principales beneficios de los frutos secos es su capacidad para mejorar 
+                la salud cardiovascular. Gracias a su alto contenido de grasas monoinsaturadas y 
+                poliinsaturadas, ayudan a reducir los niveles de colesterol LDL (malo) y aumentan 
+                el colesterol HDL (bueno), lo que disminuye el riesgo de enfermedades del corazón. 
+                Además, sus antioxidantes combaten el daño celular y la inflamación, fortaleciendo 
+                el sistema inmunológico.</p>
+                <audio src="beneficios_frutos_secos.m4a" controls></audio>
+                <aside><small>audio sobre los beneficios de comer frutos secos</small></aside>
+            </article>
+            <article>
+                <h2>Frutos secos de temporada</h2>
+                <p>los frutos secos de temporada no solo son una deliciosa y saludable fuente de energía, 
+                sino también una elección inteligente y consciente para cuidar de nuestro cuerpo y del planeta.
+                Durante el otoño e invierno, es común encontrar en su punto óptimo frutos secos como las nueces, 
+                las castañas, las almendras y las avellanas. En esta época, recién recolectados, conservan mejor 
+                sus aceites naturales y su sabor característico. Por ejemplo, las castañas frescas son muy apreciadas 
+                entre octubre y diciembre, y se pueden disfrutar asadas o en preparaciones dulces y saladas.</p>
+            </article>  
+            <article>
+                <h2>Recomendaciones</h2>
+                <ul>
+                    <li>Consumir al menos <strong>1 porción de frutos secos al dia</strong></li>
+                    <li>Prefiere frutos secos al natural o tostados sin sal</li>
+                    <li>Elige opciones de calidad y, si es posible, locales</li>
+                    <li>Evitar añadir azúcar a los frutos secos procesados</li>  
+                </ul>
+            </article>
+        </section>
+        <section>
+            <form action="datos.html" id="formContacto" method="get">
+                <h2>Contacto</h2>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z]{3,}">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="correo" name="correo" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required pattern="[0-9]{10}">
+                </div>
+                <button type="submit" >Enviar</button>
+            </form>
+            </section>
+    </main>
+    <footer>
+        <p>Derechos reservados 2025. Desarrollado por: <em>Miguel Sangucho</em> </p>
+    </footer>
+</body>
+</html>

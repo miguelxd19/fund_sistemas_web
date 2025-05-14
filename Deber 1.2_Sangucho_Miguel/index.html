@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruteria - LA FRUTA</title>
+</head>
+<body>
+    <header>
+        <h1>FRUTERIA - LA FRUTA</h1>
+        <img src="logo_fruteria-lafruta.png" alt="logo" width="100" height="100">
+    </header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="frutas.html" target="_blank">Frutas</a></li>
+                <li><a href="verduras.html" target="_blank">Vegetales</a></li>
+                <li><a href="frutos_secos.html" target="_blank">Frutos Secos</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section>
+            <article>
+                <h2>Quienes somos</h2>
+                <div>
+                    <p>Nuestro local Fruteria - La Fruta establecida en el Ecuador con una trayectoria de 10 años, 
+                    se dedica a proveer frutas y vegetales Premium, a todos los hogares de la ciudad asi como a las empresas, 
+                    catering, restaurantes, hoteles y hospitales. Los productos son de primera calidad, 
+                    que pasan por un proceso de selección, corte, lavado y empacado, 
+                    cuidando siempre que cumplan los estándares de calidad y seguridad alimentaria. 
+                    Trabajamos con productos que tienen pocas horas de haber sido cosechados, 
+                    4por esa razón podemos garantizar la frescura de todos nuestros productos.</p>
+                </div>
+            </article>
+            <article>
+                <h2>Que ofrecemos</h2>
+                <div>
+                    <p>En nuestro local de frutas encontrarás una amplia variedad de productos frescos 
+                        y de calidad. Ofrecemos frutas jugosas de temporada, verduras seleccionadas 
+                        directamente del campo y una cuidada selección de frutos secos ideales 
+                        para una alimentación balanceada. Nos comprometemos a brindarte productos 
+                        naturales que conservan su sabor, frescura y valor nutritivo.</p>
+                </div>
+            </article>
+            <article>
+                <h2>Nuestra presencia</h2>
+                <div>
+                    <p>Contamos con varios puntos de atención distribuidos estratégicamente 
+                        en la ciudad de Quito, lo que nos permite estar más cerca de ti. 
+                        Gracias a nuestra presencia en diferentes sectores, puedes acceder 
+                        fácilmente a nuestros productos frescos sin importar en qué 
+                        parte de la ciudad te encuentres.</p>
+                </div>
+            </article>
+        </section>
+        <section>
+            <form action="datos.html" id="formContacto" method="get">
+                <h2>Contacto</h2>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z]{3,}">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="correo" name="correo" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required pattern="[0-9]{10}">
+                </div>
+                <button type="submit" >Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Derechos reservados 2025. Desarrollado por: <em>Miguel Sangucho</em> </p>
+    </footer>
+    
+</body>
+</html>

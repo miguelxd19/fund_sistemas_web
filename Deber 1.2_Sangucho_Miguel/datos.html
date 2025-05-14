@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibido</title>
+</head>
+<body>
+    <header>
+        <h1>Su Información fue enviada con exito.</h1>
+    </header>
+    <main>
+        <h2>Gracias por su confianza</h2>
+        <img src="enviado.png" alt="enviado" width="300" height="300" style="float: center; margin: 10px;">
+        <p>Su información ha sido recibida y procesada correctamente.</p>
+        <a href="index.html">Volver a la pagina de inicio</a>
+    </main>
+    <p id="datos"></p>
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const nombre = parametros.get("nombre");
+        const correo = parametros.get("correo");
+        const telefono = parametros.get("telefono");
+    </script>
+
+</body>
+</html>
