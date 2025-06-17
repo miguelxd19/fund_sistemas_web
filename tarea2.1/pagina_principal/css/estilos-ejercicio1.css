@@ -1,0 +1,110 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1px;
+    padding: 0%
+}
+
+h1{
+    color: #0C1A1A;
+    text-align: center;
+    padding: 10px;  
+}
+
+.parrafo{
+    color: #0C1A1A;
+    padding: 10px;  
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+}
+
+.formulario, .resultado{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    background-color: bisque; 
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #323232;
+}
+
+input{
+    margin: 0 0 15px 0;
+}
+.calcularbtn {
+    background: #323232;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: auto;
+}
+
+.resultado{
+    background-color: beige;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.regresar-container{
+    text-align: center;
+    margin: 20px 0;
+    padding-bottom: 80px;
+}
+
+.regresar {
+    background-color: #0C1A1A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.regresar a {
+    color: white;
+    text-decoration: none;
+}
+
+.regresar:hover {
+    background-color: #1a3a3a;
+    transform: translateY(-2px);
+}
+
+footer{
+    background-color: #0C1A1A;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    font-size: small;
+}

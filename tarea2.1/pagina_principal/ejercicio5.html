@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorro Diario</title>
+    <link rel="stylesheet" href="css/estilos-ejercicio5.css">
+</head>
+
+<body>
+    <h1>Ahorro Diario en un Año</h1>
+    <p class="parrafo">Este ejercicio calcula cuánto ahorrarás diariamente y el total acumulado en un año, ahorrando el triple cada día. Ingrese cuánto va a ahorrar el primer día:</p>
+
+    <main class="grid-container">
+        <section class="formulario">
+            <label for="ahorro">Ahorro primer día (ejemplo: 0.03 para 3 centavos):
+                <input type="number" id="ahorro" min="0.01" required>
+            </label>
+            <button onclick="calcularAhorro()" class="calcularbtn">Calcular Ahorro</button>
+        </section>
+
+        <section class="resultado" id="resultado">
+
+        </section>
+    </main>
+
+    <div class="regresar-container">
+        <button class="regresar"><a href="index.html">Regresar</a></button>
+    </div>
+
+    <footer>
+        <p>Deber de Fundamentos de Programación</p>
+        <p>NRC: 21305</p>
+        <p>Elaborado por <strong>Miguel Sangucho</strong></p>
+    </footer>
+
+    <script src="js/ejercicio5.js"> </script>
+</body>
+
+</html>

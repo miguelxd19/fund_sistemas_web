@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario de Profesores</title>
+    <link rel="stylesheet" href="css/estilos-ejercicio1.css">
+</head>
+<body>
+    
+    <h1>Salario de Profesores</h1>
+    <p class="parrafo">Este ejercicio tiene como objetivo saber cual es el incremento del salario de los profesores.</p>
+
+    <main class="grid-container">
+        <section class="formulario">
+            <label for="salario">Ingrese el salario del profesor</label>
+            <input type="number" id="salario" required>
+            <button onclick="calcularSalario()" class="calcularbtn">Calcular</button>
+        </section>
+
+        <section class="resultado" id="resultado">
+
+        </section>
+    </main>
+    <div class="regresar-container">
+        <button class="regresar"><a href="index.html">Regresar</a></button>
+    </div>
+    <footer>
+        <p>Deber de Fundamentos de Programación</p>
+        <p>NRC: 21305</p>
+        <p>Elaborado por <strong>Miguel Sangucho</strong></p>
+    </footer>
+
+    <script src="js/funcionSalario.js"></script>
+</body>
+</html>

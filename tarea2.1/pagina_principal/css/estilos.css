@@ -1,0 +1,73 @@
+body{
+    background-color: beige;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+h1{
+    color: #333;
+    text-align: center;
+    padding: 20px;  
+}
+
+.contenido{
+    padding: 0 20px;
+}
+
+footer{
+    background-color: #323232;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    font-size: small;
+}
+
+.paginacion {
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;              
+    justify-content: center;      
+    gap: 50px;                    
+}
+
+.paginacion a {
+    color: black;
+    width: 130px; 
+    height: 100px; 
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    text-decoration: none;
+    border: 2px solid #323232;
+    border-radius: 5px;
+}
+
+a.salario:hover,a.hamburguesa:hover,a.algoritmo:hover,a.foco:hover,a.ahorro:hover {
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    background-color: #323232;
+}
+
+a.salario:hover {
+    background-image: url('imagenes/salario.png');
+}
+a.hamburguesa:hover {
+    background-image: url('imagenes/hamburguesa.png');
+}
+a.algoritmo:hover {
+    background-image: url('imagenes/contarNumeros.png');
+}
+a.foco:hover {
+    background-image: url('imagenes/foco.png');
+}
+a.ahorro:hover {
+    background-image: url('imagenes/ahorro.png');
+}

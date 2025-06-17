@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El náufrago satisfecho</title>
+    <link rel="stylesheet" href="css/estilos-ejercicio2.css">
+</head>
+
+<body>
+    <h1>Local de Hamburguesas</h1>
+    <p class="parrafo">Este ejercicio tiene como objetivo saber cuanto debe pagar el cliente por las hamburguesas que
+        compra.
+        Ingrese la cantidad de hamburguesas que desea comprar:
+    </p>
+
+    <main class="grid-container">
+        <section class="formulario">
+            <label>Hamburguesas sencillas ($20):
+                <input type="number" id="sencillas" min="0">
+            </label>
+
+            <label>Hamburguesas dobles ($25):
+                <input type="number" id="dobles" min="0" >
+            </label>
+
+            <label>Hamburguesas triples ($28):
+                <input type="number" id="triples" min="0">
+            </label>
+
+            <label>
+                <input type="checkbox" id="tarjeta"> ¿Paga con tarjeta de crédito? (5% de recargo)
+            </label>
+
+            <button onclick="calcularTotal()" class="calcularbtn">Calcular Total</button>
+        </section>
+
+        <section class="resultado" id="resultado">
+
+        </section>
+    </main>
+    <div class="regresar-container">
+        <button class="regresar"><a href="index.html">Regresar</a></button>
+    </div>
+    <footer>
+        <p>Deber de Fundamentos de Programación</p>
+        <p>NRC: 21305</p>
+        <p>Elaborado por <strong>Miguel Sangucho</strong></p>
+    </footer>
+
+    <script src="js/calcularHamburguesas.js"></script>
+</body>
+
+</html>

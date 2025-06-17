@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conatador de Focos</title>
+    <link rel="stylesheet" href="css/estilos-ejercicio4.css">
+</head>
+
+<body>
+
+    <h1>Contador de Focos</h1>
+
+    <main class="grid-container">
+        <section class="formulario">
+            <label for="colorFoco">Seleccione el color del foco:</label>
+            <select id="colorFoco">
+                <option value="verde">Verde</option>
+                <option value="blanco">Blanco</option>
+                <option value="rojo">Rojo</option>
+            </select>
+
+            <button onclick="agregarFoco()" class="agregarbtn">Agregar foco</button>
+            <button onclick="mostrarResultados()" class="calcularbtn">Mostrar resultados</button>
+            <div id="mensajeFoco" class="mensaje"></div>
+
+        </section>
+
+        <section class="resultado" id="resultado">
+        </section>
+    </main>
+    <div class="regresar-container">
+        <button class="regresar"><a href="index.html">Regresar</a></button>
+    </div>
+    <footer>
+        <p>Deber de Fundamentos de Programación</p>
+        <p>NRC: 21305</p>
+        <p>Elaborado por <strong>Miguel Sangucho</strong></p>
+    </footer>
+
+    <script src="js/ejercicio4.js"></script>
+</body>
+
+</html>
