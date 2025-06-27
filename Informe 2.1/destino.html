@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Lugares</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/destino.css">
+</head>
+<body>
+
+    <!-- Barra lateral -->
+    <div class="barra">
+        <h2><img src="menu-icono.png" alt="menu-icon" class="menu-icon"></h2>
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="login.html">Iniciar Sesión</a></li>
+            <li><a href="registrarse.html">Registrarse</a></li>
+            <li><a href="destino.html">Destino</a></li>
+            <li><a href="contacto.html">Contactos</a></li>
+        </ul>
+    </div>
+
+    <!-- Barra de búsqueda fija arriba -->
+    <div class="search-container" id="searchContainer">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar un lugar...">
+            <div class="actions">
+                <button id="voiceSearch"><span class="material-icons">mic</span></button>
+                <button id="scanSearch"><span class="material-icons">document_scanner</span></button>
+                <button id="textSearch"><span class="material-icons">search</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor principal de tarjetas -->
+    <main class="main-content">
+        <section class="cards" id="cardsContainer">
+            <!-- Tarjeta 1 -->
+            <div class="card" data-name="condor machay">
+                <img src="https://lc.cx/qwCZ7j" alt="cascada">
+                <div class="header">
+                    <div class="title">Condor Machay</div>
+                    <p>Hermosa cascada ubicada en Sangolquí, perfecta para un día de aventura.</p>
+                    <a href="https://www.google.com/maps/dir//-0.3071463,-78.4491553/@-0.3141897,-78.4479135,15.15z?entry=ttu" target="_blank">Ver en mapa</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card" data-name="laguna el altar">
+                <img src="https://lc.cx/L4W8FM" alt="Laguna el altar">
+                <div class="header">
+                    <div class="title">Laguna El Altar</div>
+                    <p>Impresionante laguna glaciar con aguas color esmeralda en los Andes.</p>
+                    <a href="https://www.google.com/maps/place/Laguna+Azul+o+Negrapagcha/@-1.7020511,-78.5059953,13z/data=!4m9!1m2!2m1!1slaguna+el+altar!3m5!1s0x91d3b1a1c5c6db8d:0xa196d2d75b794e77!8m2!3d-1.7020481!4d-78.4274664!16s%2Fg%2F11tcy4v8sw?entry=ttu" target="_blank">Ver en mapa</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card" data-name="espe sangolqui">
+                <img src="https://lc.cx/TDLRlu" alt="Espe Sangolqui">
+                <div class="header">
+                    <div class="title">Espe Sangolquí</div>
+                    <p>Centro recreacional con piscinas y áreas verdes para días familiares.</p>
+                    <a href="https://maps.app.goo.gl/omYrqaEjtTsimi3y8" target="_blank">Ver en mapa</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/destino.js"></script>
+</body>
+</html> 

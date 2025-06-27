@@ -1,0 +1,293 @@
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #cbc88c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* BARRA LATERAL */
+.barra {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.barra:hover {
+    width: 250px;
+    background-color: rgba(5, 33, 51, 0.98);
+}
+
+.barra img {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.barra:hover img {
+    opacity: 0;
+}
+
+.barra h3 {
+    opacity: 0;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.barra:hover h3 {
+    opacity: 1;
+}
+
+.barra ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.barra a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 0;
+    transition: all 0.3s ease;
+}
+
+.barra:hover a {
+    font-size: 16px;
+}
+
+.barra a:hover {
+    background-color: #444;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+}
+
+/* FORMULARIO DE REGISTRO */
+.body-container {
+    background-color: bisque;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.body-container h2 {
+    color: #0C1A1A;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.body-container p {
+    text-align: center;
+    color: #323232;
+    margin-bottom: 20px;
+}
+
+/* ESTILOS DEL FORMULARIO */
+form p {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #323232;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn-register {
+    background: #323232;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.providers {
+    text-align: center;
+}
+
+.providers span {
+    display: block;
+    margin-bottom: 10px;
+    color: #323232;
+    font-weight: bold;
+}
+
+.providers button {
+    background: #323232;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* ESTILOS DEL CONTENEDOR DE ESPERA */
+
+/* SECCIÓN DE BIENVENIDA */
+.welcome {
+    background-color: #000000;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 490px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* ANIMACIÓN DEL CÍRCULO */
+.outer-box {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 30px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #f3f3f3;
+    stroke-width: 10px;
+}
+
+.progress-circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 10px;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+}
+
+/* ANIMACIONES */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes progress-animation {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* MENSAJE DE BIENVENIDA */
+.welcome-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.welcome-message strong {
+    color: #4CAF50;
+}
+
+/* BOTÓN CONTINUAR */
+.btn-continue {
+    background:#e91e63;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 16px;
+}
+
+.btn-continue.visible {
+    opacity: 1;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .grid-container {
+        flex-direction: column;
+    }
+    
+    .welcome,
+    .body-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .welcome {
+        height: auto;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-container {
+        padding: 20px;
+    }
+    
+    .barra {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+    
+    .barra:hover {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .main-container {
+        padding-left: 0;
+        margin-top: 60px;
+    }
+}

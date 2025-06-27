@@ -1,0 +1,256 @@
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.barra {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Elimina los bordes iniciales y solo muéstralos al hacer hover */
+.barra li {
+    border-top: 1px solid transparent; /* Inicialmente transparente */
+    transition: border-color 0.3s ease;
+}
+
+.barra:hover li {
+    border-top-color: #555; /* Color visible al hacer hover */
+}
+
+/* Resto de estilos para la barra (se mantienen igual) */
+.barra:hover {
+    width: 250px;
+    background-color: rgba(5, 33, 51, 0.98);
+}
+
+.barra img {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.barra:hover img {
+    opacity: 0;
+}
+.barra h3{
+    opacity: 0;
+}
+.barra h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    transition: font-size 0.3s ease;
+}
+
+.barra:hover h3 {
+    color: white;
+    text-align: center;
+    opacity: 1;
+}
+
+.barra ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.barra a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 0;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.barra:hover a {
+    font-size: 16px;
+}
+
+.barra a:hover {
+    background-color: #444;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-container {
+    position: fixed;
+    top: 0;
+    left: 60px;
+    right: 0;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    background: transparent;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5f6368;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.actions button:hover {
+    background: rgba(60, 64, 67, 0.08);
+}
+
+.material-icons {
+    font-size: 20px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    margin-left: 60px;
+    padding-top: 80px; /* Ajuste para la barra de búsqueda */
+    padding-bottom: 20px;
+}
+
+/* TARJETAS DE DESTINOS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card.highlight {
+    background: #e8f5e9; /* Fondo verde claro para resultados */
+    border: 2px solid #4CAF50;
+    animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .header {
+    padding: 16px;
+}
+
+.card .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #202124;
+}
+
+.card p {
+    color: #5f6368;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.card a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* MENSAJE DE NO RESULTADOS */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+    color: #5f6368;
+    font-size: 1.1em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .search-container {
+        left: 0;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding-top: 120px; /* Más espacio para la barra en móvil */
+    }
+    
+    .barra {
+        width: 100%;
+        height: 60px;
+        top: 0;
+    }
+    
+    .barra:hover {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,224 @@
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #cbc88c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.barra {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+    background-color: rgba(5, 33, 51, 0.1);
+}
+
+.barra li {
+    border-top: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.barra:hover li {
+    border-top-color: #555;
+}
+
+.barra:hover {
+    width: 250px;
+    background-color: rgba(5, 33, 51, 0.98);
+}
+
+.barra img {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.barra:hover img {
+    opacity: 0;
+}
+
+.barra h3 {
+    opacity: 0;
+}
+
+.barra h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    transition: font-size 0.3s ease;
+}
+
+.barra:hover h3 {
+    color: white;
+    text-align: center;
+    opacity: 1;
+}
+
+.barra ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.barra a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 0;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.barra:hover a {
+    font-size: 16px;
+}
+
+.barra a:hover {
+    background-color: #444;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 60px; /* espacio para la barra lateral */
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.body-container {
+    background-color: bisque;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 30px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+
+.body-container h2 {
+    color: #0C1A1A;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.body-container p {
+    text-align: center;
+    color: #323232;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+form p {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #323232;
+}
+
+.input,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.btn-submit {
+    background: #323232;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* CONTENEDOR ESPERA */
+.wait-container {
+    background-color: #000000;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 490px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.waitmessage {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    min-height: 40px;
+    padding: 0 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .wait-container {
+        width: 100%;
+    }
+
+    .body-container {
+        width: 100%;
+    }
+}
+
+.progress-bar-container {
+    width: 80%;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #e91e63, #ff8a65);
+    border-radius: 10px;
+    transition: width 3s ease;
+}
