@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario - Ensalada César</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white">
+
+    <nav class="navbar bg-dark border-bottom border-body navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="imagenes/logo.png" alt="Logo" class=" img-fluid me-2" width="50" height="100">
+            <a class="navbar-brand" href="#">Recetas Web ^^</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="receta.html">Recetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Enviar recetas</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar recetas" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Receta: Encebollado</h2>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="ingredientes-tab" data-bs-toggle="tab"
+                    data-bs-target="#ingredientes-tab-pane" type="button" role="tab"
+                    aria-controls="ingredientes-tab-pane" aria-selected="true">Ingredientes</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="preparación-tab" data-bs-toggle="tab"
+                    data-bs-target="#preparacion-tab-pane" type="button" role="tab" aria-controls="preparacion-tab-pane"
+                    aria-selected="false">Preparación</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="ingredientes-tab-pane" role="tabpanel"
+                aria-labelledby="ingredientes-tab" tabindex="0">
+                <p class="mt-3">Estos son los ingredientes para preparar un encebollado</p>
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ingredientes</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Calorias</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >Bacalao</th>
+                                <td>5kg</td>
+                                <td class="calorias">1500</td>
+                            </tr>
+                            <tr>
+                                <td >Yuca</th>
+                                <td>1kg</td>
+                                <td class="calorias">100</td>
+                            </tr>
+                            <tr>
+                                <td >Cebolla</th>
+                                <td>3kg</td>
+                                <td class="calorias">70</td>
+
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"><strong>Total calorías</strong></td>
+                                <td id="totalCalorias"><strong>1670</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                     <button id="btnCalcular" class="btn btn-primary">Calcular calorías</button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="preparacion-tab-pane" role="tabpanel" aria-labelledby="preparacion-tab"
+                tabindex="0">
+                <p class="mt-2">El encebollado es un plato típico ecuatoriano hecho a base de pescado, yuca cocida, cebolla encurtida, tomate, 
+                    cilantro y especias, todo servido en un caldo caliente y acompañado de limón, chifles o pan;
+                   se prepara cocinando el pescado con ajo y comino, agregando la yuca y luego incorporando el refrito y las cebollas 
+                    encurtidas para dar su sabor característico.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Función para calcular calorías
+        document.getElementById('calculateCalories').addEventListener('click', function () {
+            let calories = document.querySelectorAll('.calories');
+            let total = 0;
+
+            calories.forEach(function (item) {
+                total += parseInt(item.textContent);
+            });
+
+            document.getElementById('totalCalories').innerHTML = '<strong>' + total + '</strong>';
+            alert('Calorías totales calculadas: ' + total);
+        });
+    </script>
+</body>
+
+</html>
